@@ -59,7 +59,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  ElevatedButton(
+                  TextButton(
                     onPressed: () async {
                       try {
                         widget.weatherData = await weatherModel.getLocationWeather();
@@ -74,7 +74,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       size: 50.0,
                     ),
                   ),
-                  ElevatedButton(
+                  TextButton(
                     onPressed: () async {
                       var selectedCity = await Navigator.push(context, MaterialPageRoute(builder: (context) {
                         return CityScreen();
@@ -126,7 +126,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(right: 15.0, bottom: 15),
+                padding: EdgeInsets.all(15.0),
                 child: Text(
                   '$tempMessage in $cityName',
                   textAlign: TextAlign.right,

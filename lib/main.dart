@@ -7,7 +7,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Colors.white,
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(foregroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+        ),
+      ),
       home: LoadingScreen(),
     );
   }

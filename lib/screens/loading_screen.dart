@@ -48,8 +48,3 @@ class _LoadingScreenState extends State<LoadingScreen> {
     }
   }
 }
-/*
-  var condition = decodedData['weather'][0]['id'];
-    var temp = decodedData['main']['temp'];
-    var cityName = decodedData['name'];
- */
